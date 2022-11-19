@@ -8,30 +8,31 @@
 </head>
 <body>
     <h1>Stel uw vraag hier:</h1>
-    <form action="verzenden.php" method="get">
-        <div aria-required="false">
+    <form action="https://tm-statweb.be/sendmail.php" method="post">
+        <div>
             <label for="Naam">Naam: <input type="text" name="Naam" id="Naam" required></label>
         </div>
         <div>
-            <label for="Email">Email: <input type="email" name="Email" id="Email"></label>
+            <label for="Email">Email: <input type="email" name="Email" id="Email" required></label>
         </div>
         <div>
-            <label for="Website">Website: <input type="url" name="Website" id="Website"></label>
+            <label for="Website">Website: <input type="url" name="Website" id="Website" required></label>
         </div>
         <div>
             <label for="Reactie">Reactie: <textarea name="Reactie" id="Reactie" cols="30" rows="10"></textarea></label>
         </div>
         <div>
             <fieldset>
-                <legend>Geslacht</legend>
-                <label for="Male">Male:<input type="radio" name="Geslacht" id="Male"></label>
-                <label for="Female">Female:<input type="radio" name="Geslacht" id="Female"></label>
-                <label for="Other">Other:<input type="radio" name="Geslacht" id="Other"></label>
+                 <legend>Geslacht</legend>
+                 <label for="male">Male <input type="radio" name="gender" id="male"></label>   
+                 <label for="female">Female <input type="radio" name="gender" id="female"></label>
+                 <label for="other">Other <input type="radio" name="gender" id="other"></label>
             </fieldset>
         </div>
         <div>
-            <label for="Checkbox">Hou me op de hoogte: <input type="checkbox" name="Checkbox" id="Checkbox"></label>
+            <label for="Checkbox">Hou me op de hoogte: <input type="checkbox" name="Checkbox" id="Checkbox" required></label>
         </div>
+        <input type="hidden" name="studentemail" value="bart.ooms@thomasmore.be">
         <div>
             <input type="submit" value="Indienen">
         </div>
